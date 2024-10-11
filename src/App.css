@@ -1,0 +1,22 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+}
+
+/* Main layout */
+.main-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}

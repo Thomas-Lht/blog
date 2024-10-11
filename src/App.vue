@@ -1,26 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app"> <!-- 注意这里的 class 名称为小写 -->
+    <Header />
+    <Navbar />
+    <Footer />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue';
+import Navbar from './components/Navbar.vue';
+import Footer from './components/Footer.vue';
+// 如果需要使用 ServerStatus 和 Weather 组件，可以将它们也引入
+// import ServerStatus from './components/ServerStatus.vue';
+// import Weather from './components/Weather.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    Navbar,
+    Footer,
+    // ServerStatus,
+    // Weather
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import './App.css'; /* 引入 CSS 文件 */
 </style>
