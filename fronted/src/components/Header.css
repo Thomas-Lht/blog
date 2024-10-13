@@ -1,20 +1,23 @@
 .header {
-    padding: 250px 0 0 0 !important;
+    position: relative; /* 添加这一行 */
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 550px !important;
+    width: 100%;
     display: flex;
-    height:370px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    position: relative; /* 添加此行代码 */
-    top: -50px; /* 添加此行代码 */
-    overflow: hidden;
-    z-index: 0; /* 添加此行代码 */
+    overflow: hidden !important;
+    z-index: 0;
 }
 
 .header .header_picture{
+    position: absolute;
+    margin: 0;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    position: absolute; /* 添加此行代码 */
-    top: 0; /* 添加此行代码 */
+    top: 0;
 }

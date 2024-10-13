@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-%i-b!3v2=eew-tv$+!((z4k=-srm4gqu!#%k1i80qpkpj1+a6r'
+SECRET_KEY = 'django-insecure-kz6b#bb!^#6jw9h@vcr1o+x(aybq%+e(lq6to)u851%yw^y!7w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'blog',
+    'markdownx',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -75,8 +77,12 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'Blog',
+        'USER': 'haoyue',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',  # or your database host
+        'PORT': '3306',       # default MySQL port
     }
 }
 

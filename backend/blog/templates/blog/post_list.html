@@ -1,0 +1,7 @@
+<h1>Blog Posts</h1>
+<a href="{% url 'post_create' %}">New Post</a>
+<ul>
+    {% for post in posts %}
+    <li>{{ post.title }} - {{ post.created_at }}</li>
+    {% endfor %}
+</ul>

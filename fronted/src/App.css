@@ -1,38 +1,31 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('../public/iconfont/iconfont.woff2') format('woff2'),
+  url('../public/iconfont/iconfont.woff') format('woff'),
+  url('../public/iconfont/iconfont.ttf') format('truetype');
+}
+
+/* App.css */
+html, body {
+  margin: 0;
+  padding-top: 0 !important;
+  height: 100%; /* 确保父容器有足够的高度 */
+  display: flex; /* 让 body 成为一个 flex 容器 */
+  flex-direction: column; /* 垂直排列子元素 */
+}
+
 .App {
-  text-align: center;
+  flex: 1; /* 确保 .App 填满剩余空间 */
+  display: flex; /* 让 .App 也成为一个 flex 容器 */
+  flex-direction: column; /* 垂直排列 Header、Navbar、Footer */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header, .navbar, .footer {
+  padding: 10px; /* 添加一些内边距 */
+  background-color: #f0f0f0; /* 背景颜色 */
+  border: 1px solid #ccc; /* 边框以便视觉分隔 */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer {
+  margin-top: auto; /* 确保 Footer 始终在底部 */
 }
